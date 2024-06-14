@@ -1,0 +1,1145 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+@media (min-width: 75rem) {
+  header {
+    position: relative;
+    width: 100%;
+  }
+  .loading-bar {
+    position: relative;
+    background-color: #312f2f;
+  }
+
+  .solid {
+    width: 0%;
+    height: 2px;
+    background-color: #f1f1f1;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 0px;
+    transition: width 0.5s;
+  }
+
+  /* 메뉴 */
+  .menu {
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    color: white;
+    background-color: #312f2f;
+  }
+
+  .lnb {
+    text-align: center;
+  }
+
+  .menuplus {
+    justify-content: center;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .menuplus.on {
+    z-index: 999;
+    width: 100%;
+    background-color: rgba(100, 96, 96, 0.5);
+    color: white;
+    position: fixed;
+  }
+
+  .menuplus li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .menuplus .lnb {
+    padding: 10px;
+  }
+
+  .menuup {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .menuup h3 {
+    padding: 10px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 50px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes move {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .menuup2 {
+    position: absolute;
+    top: -100px;
+    left: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menuup2 p {
+    padding: 20px;
+  }
+
+  .lnb {
+    display: none;
+  }
+
+  .gnb .active {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .input {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    height: 30px;
+    background-color: #003366;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .slide > a {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .panel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0px;
+  }
+
+  .panel li {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .panel li:nth-child(1) {
+    position: relative;
+    background-image: url(../img/al-elmes-ULHxWq8reao-unsplash.jpg);
+  }
+
+  .panel li:nth-child(2) {
+    position: relative;
+    background-image: url(../img/albert-YYZU0Lo1uXE-unsplash.jpg);
+  }
+
+  .panel li:nth-child(3) {
+    position: relative;
+    background-image: url(../img/thomas-beaman-PO56PwADoFU-unsplash.jpg);
+  }
+
+  .panel li:nth-child(4) {
+    position: relative;
+    background-image: url(../img/al-elmes-ULHxWq8reao-unsplash.jpg);
+  }
+
+  .panel li h1 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .panel li h4 {
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .slide > a {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev {
+    opacity: 0.8;
+    left: 10px;
+  }
+
+  .next {
+    opacity: 0.8;
+    right: 120px;
+  }
+
+  #container {
+    width: 100%;
+    height: 100vh;
+    color: black;
+  }
+  #container2 {
+    margin: 50px auto; /* Adjust the margin value as needed */
+    width: 90%;
+  }
+
+  #container2 h1 {
+    margin-top: 80px;
+    font-size: 60px;
+    text-align: center;
+  }
+
+  #container2 p {
+    font-size: 20px;
+    color: #9e9a9a;
+    text-align: center;
+  }
+
+  .Operating h2 {
+    padding-left: 180px;
+  }
+
+  .oper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boder {
+    margin: 0px auto;
+    width: 80%;
+    height: 0;
+    border-top: 0.5px solid #b8b6b6;
+  }
+
+  .oper ul {
+    display: flex;
+  }
+
+  .oper {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .oper li {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .opers div {
+    justify-content: center;
+    padding: 15px;
+    display: flex;
+  }
+
+  .Operating {
+    margin-top: 100px;
+    font-size: 22px;
+  }
+
+  span {
+    color: #555;
+  }
+
+  .boder2 {
+    width: 1px;
+    height: 200px;
+    background-color: #b8b6b6;
+  }
+
+  .Price {
+    font-size: 22px;
+    margin-top: 100px;
+  }
+
+  .Price ul {
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+  }
+
+  .Price h2 {
+    font-size: 30px;
+    padding-left: 180px;
+  }
+
+  swiper-container {
+    margin: 30px auto;
+    width: 60%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    object-fit: cover;
+    width: 80%;
+    height: 600px;
+  }
+  swiper-button-next {
+    display: none;
+  }
+  #gallery h2 {
+    padding-top: 50px;
+    font-size: 30px;
+    padding-left: 180px;
+  }
+
+  #footer {
+    margin-top: 100px;
+    height: 200px;
+    background-color: #312f2f;
+  }
+
+  .dis {
+    padding: 30px;
+    display: flex;
+  }
+
+  #footer ul li {
+    color: white;
+    padding-left: 10px;
+  }
+
+  .dis2 {
+    padding-left: 30px;
+  }
+  #container2,
+  .Price,
+  #gallery {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 1s ease, transform 1s ease; /* 1초로 설정 */
+  }
+
+  #container2.on,
+  .Price.on,
+  #gallery.on {
+    transition: opacity 0.5s ease, transform 1s ease;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (min-width: 45rem) and (max-width: 75rem) {
+  header {
+    position: relative;
+    width: 100%;
+  }
+  .loading-bar {
+    position: relative;
+    background-color: #312f2f;
+  }
+
+  .solid {
+    width: 0%;
+    height: 2px;
+    background-color: #f1f1f1;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 0px;
+    transition: width 0.5s;
+  }
+
+  /* 메뉴 */
+  .menu {
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    color: white;
+    background-color: #312f2f;
+  }
+
+  .lnb {
+    text-align: center;
+  }
+
+  .menuplus {
+    justify-content: center;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .menuplus.on {
+    z-index: 999;
+    width: 100%;
+    background-color: rgba(100, 96, 96, 0.5);
+    color: white;
+    position: fixed;
+  }
+
+  .menuplus li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .menuplus .lnb {
+    padding: 10px;
+  }
+
+  .menuup {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .menuup h3 {
+    padding: 10px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 50px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes move {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .menuup2 {
+    position: absolute;
+    top: -100px;
+    left: 80%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menuup2 p {
+    padding: 20px;
+  }
+
+  .lnb {
+    display: none;
+  }
+
+  .gnb .active {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .input {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    height: 30px;
+    background-color: #003366;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .slide > a {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .panel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0px;
+  }
+
+  .panel li {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .panel li:nth-child(1) {
+    position: relative;
+    background-image: url(../img/al-elmes-ULHxWq8reao-unsplash.jpg);
+  }
+
+  .panel li:nth-child(2) {
+    position: relative;
+    background-image: url(../img/albert-YYZU0Lo1uXE-unsplash.jpg);
+  }
+
+  .panel li:nth-child(3) {
+    position: relative;
+    background-image: url(../img/thomas-beaman-PO56PwADoFU-unsplash.jpg);
+  }
+
+  .panel li:nth-child(4) {
+    position: relative;
+    background-image: url(../img/thomas-beaman-PO56PwADoFU-unsplash.jpg);
+  }
+
+  .panel li h1 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .panel li h4 {
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .slide > a {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev {
+    opacity: 0.8;
+    left: 10px;
+  }
+
+  .next {
+    opacity: 0.8;
+    right: 120px;
+  }
+
+  #container {
+    width: 100%;
+    height: 100vh;
+    color: black;
+  }
+  #container2 {
+    margin: 50px auto; /* Adjust the margin value as needed */
+    width: 90%;
+  }
+
+  #container2 h1 {
+    margin-top: 80px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  #container2 p {
+    font-size: 20px;
+    color: #9e9a9a;
+    text-align: center;
+  }
+
+  .oper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boder {
+    margin: 30px auto;
+    width: 80%;
+    height: 0;
+    border-top: 0.5px solid #b8b6b6;
+  }
+
+  .oper ul {
+    display: flex;
+  }
+
+  .oper {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .oper li {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .opers div {
+    justify-content: center;
+    padding: 15px;
+    display: flex;
+  }
+
+  .Operating {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px;
+  }
+
+  span {
+    color: #555;
+  }
+
+  .boder2 {
+    width: 1px;
+    height: 200px;
+    background-color: #b8b6b6;
+  }
+
+  .Price {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px;
+
+    margin-top: 100px;
+  }
+
+  .Price ul {
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+  }
+
+  .Price h2 {
+    font-size: 27px;
+  }
+
+  swiper-container {
+    margin: 30px auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+  }
+  swiper-button-next {
+    display: none;
+  }
+  #gallery h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 27px;
+  }
+
+  #footer {
+    margin-top: 100px;
+    height: 200px;
+    background-color: #312f2f;
+  }
+
+  .dis {
+    padding: 30px;
+    display: flex;
+  }
+
+  #footer ul li {
+    color: white;
+    padding-left: 10px;
+  }
+
+  .dis2 {
+    padding-left: 30px;
+  }
+
+  #container2,
+  .Price,
+  #gallery {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 1s ease, transform 1s ease; /* 1초로 설정 */
+  }
+
+  #container2.on,
+  .Price.on,
+  #gallery.on {
+    transition: opacity 0.5s ease, transform 1s ease;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 45rem) {
+  header {
+    position: relative;
+    width: 100%;
+  }
+  .loading-bar {
+    position: relative;
+    background-color: #312f2f;
+  }
+
+  .solid {
+    width: 0%;
+    height: 2px;
+    background-color: #f1f1f1;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 0px;
+    transition: width 0.5s;
+  }
+
+  /* 메뉴 */
+  .menu {
+    z-index: 999;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    color: white;
+    background-color: #312f2f;
+  }
+
+  .lnb {
+    text-align: center;
+  }
+
+  .menuplus {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .menuplus.on {
+    z-index: 999;
+    width: 100%;
+    background-color: rgba(100, 96, 96, 0.5);
+    color: white;
+    position: fixed;
+  }
+
+  .menuplus li {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .menuplus .lnb {
+    padding: 10px;
+  }
+
+  .menuup {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .menuup h3 {
+    padding: 10px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 50px;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes move {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  .menuup2 {
+    position: absolute;
+    top: -100px;
+    left: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menuup2 p {
+    padding: 20px;
+  }
+
+  .lnb {
+    display: none;
+  }
+
+  .gnb .active {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .input {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    height: 30px;
+    background-color: #003366;
+  }
+
+  #content {
+    width: 100%;
+  }
+
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .slide > a {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .panel {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0px;
+  }
+
+  .panel li {
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .panel li:nth-child(1) {
+    position: relative;
+    background-image: url(../img/al-elmes-ULHxWq8reao-unsplash.jpg);
+  }
+
+  .panel li:nth-child(2) {
+    position: relative;
+    background-image: url(../img/albert-YYZU0Lo1uXE-unsplash.jpg);
+  }
+
+  .panel li:nth-child(3) {
+    position: relative;
+    background-image: url(../img/thomas-beaman-PO56PwADoFU-unsplash.jpg);
+  }
+
+  .panel li:nth-child(4) {
+    position: relative;
+    background-image: url(../img/thomas-beaman-PO56PwADoFU-unsplash.jpg);
+  }
+
+  .panel li h1 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .panel li h4 {
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .slide > a {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev {
+    opacity: 0.8;
+    left: 10px;
+  }
+
+  .next {
+    opacity: 0.8;
+    right: 120px;
+  }
+
+  #container {
+    width: 100%;
+    height: 100vh;
+    color: black;
+  }
+  #container2 {
+    margin: 50px auto;
+    width: 90%;
+  }
+
+  #container2 h1 {
+    margin-top: 80px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #container2 p {
+    font-size: 18px;
+    color: #9e9a9a;
+    text-align: center;
+  }
+
+  .oper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .boder {
+    margin: 20px auto;
+    width: 100%;
+    height: 0;
+    border-top: 0.5px solid #b8b6b6;
+  }
+
+  .oper ul {
+    display: flex;
+  }
+
+  .oper {
+    text-align: center;
+  }
+
+  .oper li {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .opers div {
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .Operating {
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px;
+  }
+
+  span {
+    color: #555;
+  }
+
+  .boder2 {
+    width: 1px;
+    height: 200px;
+    background-color: #b8b6b6;
+  }
+
+  .Price {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 15px;
+    margin-top: 100px;
+  }
+
+  .Price ul {
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+  }
+
+  .Price h2 {
+    font-size: 27px;
+  }
+
+  swiper-container {
+    margin: 30px auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 600px;
+  }
+  swiper-button-next {
+    display: none;
+  }
+  #gallery h2 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 27px;
+  }
+
+  #footer {
+    margin-top: 100px;
+    height: 200px;
+    background-color: #312f2f;
+  }
+
+  .dis {
+    padding: 30px;
+    display: flex;
+  }
+
+  #footer ul li {
+    color: white;
+    padding-left: 10px;
+  }
+
+  .dis2 {
+    padding-left: 30px;
+  }
+
+  #container2,
+  .Price,
+  #gallery {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 1s ease, transform 1s ease; /* 1초로 설정 */
+  }
+
+  #container2.on,
+  .Price.on,
+  #gallery.on {
+    transition: opacity 0.5s ease, transform 1s ease;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
