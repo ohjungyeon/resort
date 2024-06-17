@@ -29,4 +29,14 @@ for (let i = 0; i <= 79; i++) {
   }, i * 30);
 }
 
+$(function () {
+  $(".xe").on("click", function () {
+    $(".overlay").toggleClass("off");
+    $(this).toggleClass("active");
+    $("body").toggleClass("overlay-active");
+  });
 
+  $(".hamburger").on("click", function () {
+    $("body").toggleClass("overlay-active");
+  });
+});

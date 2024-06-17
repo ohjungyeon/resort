@@ -15,10 +15,23 @@ $(function () {
         i = 0;
         $(".panel").css({ left: 0 });
       }
+
+      $(".navi li").removeClass("on");
+      $(".navi li").eq(i).addClass("on");
       slide();
     }, 3000);
   }
 
+  $(".navi li").on("click", function () {
+    clearInterval(timer);
+    i = $(this).index();
+    $(".panel")
+      .stop()
+      .animate({ left: -i * wid });
+    $(".navi li").removeClass("on");
+    $(".navi li").eq(i).addClass("on");
+    start();
+  });
   function slide() {
     $(".panel li div").removeClass("visible");
     $(".panel")
@@ -35,6 +48,8 @@ $(function () {
       i = 0;
       $(".panel").css({ left: 0 });
     }
+    $(".navi li").removeClass("on");
+    $(".navi li").eq(i).addClass("on");
     slide();
     start();
   });
@@ -46,6 +61,8 @@ $(function () {
       i = total - 1;
       $(".panel").css({ left: -i * wid });
     }
+    $(".navi li").removeClass("on");
+    $(".navi li").eq(i).addClass("on");
     slide();
     start();
   });
@@ -139,3 +156,14 @@ function showReservation() {
   var footer = document.getElementById("footer");
   footer.style.display = "block";
 }
+$(function () {
+  $(".xe").on("click", function () {
+    $(".overlay").toggleClass("off");
+    $(this).toggleClass("active");
+    $("body").toggleClass("overlay-active");
+  });
+
+  $(".hamburger").on("click", function () {
+    $("body").toggleClass("overlay-active");
+  });
+});

@@ -86,3 +86,15 @@ $(document).ready(function () {
     }
   });
 }, 500);
+
+$(function () {
+  $(".xe").on("click", function () {
+    $(".overlay").toggleClass("off");
+    $(this).toggleClass("active");
+    $("body").toggleClass("overlay-active");
+  });
+
+  $(".hamburger").on("click", function () {
+    $("body").toggleClass("overlay-active");
+  });
+});
