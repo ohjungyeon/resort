@@ -96,7 +96,7 @@ $(document).ready(function () {
 
 $(function () {
   $(".xe").on("click", function () {
-    $(".overlay").toggleClass("off");
+    $(".overlay").toggleClass("on");
     $(this).toggleClass("active");
     $("body").toggleClass("overlay-active");
   });

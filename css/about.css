@@ -323,7 +323,9 @@ ul {
     padding: 20px;
     display: flex;
   }
-
+  .overlay {
+    display: none;
+  }
   .Price h2 {
     font-size: 30px;
     padding-left: 180px;
@@ -768,6 +770,8 @@ ul {
     opacity: 1;
     transform: translateY(0px);
   }
+  .overlay {
+    display: none;
 }
 
 @media (max-width: 45rem) {
