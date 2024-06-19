@@ -163,7 +163,7 @@ ul {
   }
   .next {
     opacity: 0.8;
-    right: px;
+    right: 128px;
   }
   .panel {
     position: relative;

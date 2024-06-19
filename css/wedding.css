@@ -266,20 +266,25 @@ ul {
   #gallery {
     margin: 0 auto 50px;
     width: 90%;
+    padding-left: 50px;
   }
   #gallery h2 {
     margin-top: 80px;
     padding-top: 50px;
     font-size: 30px;
-    padding-left: 210px; /* 간격 조정 */
+    padding-left: 150px; /* 간격 조정 */
   }
   #gallery ul {
-    justify-content: center;
-    display: flex;
+    display: flex; /* 가로로 정렬된 요소들 */
+    justify-content: center; /* 가운데 정렬합니다 */
+    gap: 20px; /* 요소 사이 간격을 줍니다 */
+    flex-wrap: wrap; /* 요소들을 여러 줄로 묶어 정렬합니다 */
   }
 
   #gallery ul img {
-    width: 550px;
+    width: 100%; /* 이미지 너비를 100%로 설정하여 갤러리 크기에 맞춥니다 */
+    max-width: 450px; /* 이미지 최대 너비를 설정합니다 */
+    height: auto; /* 이미지 높이를 자동으로 조정합니다 */
   }
   #gallery ul li {
     margin: 10px;
@@ -287,11 +292,12 @@ ul {
   #service {
     margin: 50px auto;
     width: 90%;
+    padding-left: 50px; /* 왼쪽 여백 조정 */
   }
   #service h2 {
     margin-top: 80px;
     font-size: 30px;
-    padding-left: 210px; /* 간격 조정 */
+    padding-left: 150px; /* 간격 조정 */
   }
   #service img {
     vertical-align: middle;
@@ -312,13 +318,13 @@ ul {
   .party {
     justify-content: center;
     margin: 0px auto;
-    width: 80%;
+    width: 83%;
     display: flex;
   }
 
   .party li:nth-child(2) {
     border: 0.5px solid #b8b6b6;
-    width: 700px;
+    width: 800px;
   }
   .party h1 {
     font-size: 40px;

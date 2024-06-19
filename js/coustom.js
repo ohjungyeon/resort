@@ -32,6 +32,7 @@ $(function () {
     $(".navi li").eq(i).addClass("on");
     start();
   });
+
   function slide() {
     $(".panel li div").removeClass("visible");
     $(".panel")
@@ -81,7 +82,6 @@ $(function () {
     }
   });
 
-  // 스크롤 이벤트 핸들러 내부로 이동
   $(window).on("scroll", function () {
     let sc = $(this).scrollTop();
     if (sc >= 100) {
@@ -101,12 +101,13 @@ for (let i = 0; i <= 79; i++) {
     }
   }, i * 30);
 }
+
 $(document).ready(function () {
   $(".panel li:first-child div").addClass("visible");
   $(".slide").on("transitionend", function () {
     $(this).find(".panel li div").addClass("visible");
   });
-  let baseline = -700;
+  let baseline = -1000;
   let con1 = $("#room").offset().top + baseline;
   let con2 = $("#gallery").offset().top + baseline;
   let con3 = $("#event").offset().top + baseline;
@@ -121,8 +122,9 @@ $(document).ready(function () {
   $(window).on("scroll", function () {
     clearTimeout(timeout);
 
+    // Reduced the delay to 50ms for a quicker response
     timeout = setTimeout(function () {
-      let scroll = $(this).scrollTop();
+      let scroll = $(window).scrollTop();
 
       if (scroll >= con1) {
         $("#room").addClass("on");
@@ -149,13 +151,15 @@ $(document).ready(function () {
       } else {
         $("#dining").removeClass("on");
       }
-    }, 200); // 150ms 이후에 타임아웃이 실행됩니다.
+    }, 50); // Reduced delay to 50ms
   });
 });
+
 function showReservation() {
   var footer = document.getElementById("footer");
   footer.style.display = "block";
 }
+
 $(function () {
   $(".xe").on("click", function () {
     $(".overlay").toggleClass("off");
