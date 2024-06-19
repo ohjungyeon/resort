@@ -71,7 +71,7 @@ $(document).ready(function () {
           $("#container2").removeClass("on");
         }
 
-        if (scroll >= con2) {
+        if (scroll >= con3) {
           $("#gallery").addClass("on");
         } else {
           $("#gallery").removeClass("on");
@@ -89,7 +89,7 @@ $(document).ready(function () {
         } else {
           $("#interview").removeClass("on");
         }
-      }, 300); // 150ms 이후에 타임아웃이 실행됩니다.
+      }, 80); // 150ms 이후에 타임아웃이 실행됩니다.
     });
   });
 });
