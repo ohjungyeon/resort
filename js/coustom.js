@@ -107,7 +107,7 @@ $(document).ready(function () {
   $(".slide").on("transitionend", function () {
     $(this).find(".panel li div").addClass("visible");
   });
-  let baseline = -1000;
+  let baseline = -800;
   let con1 = $("#room").offset().top + baseline;
   let con2 = $("#gallery").offset().top + baseline;
   let con3 = $("#event").offset().top + baseline;
