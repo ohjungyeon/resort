@@ -2,7 +2,23 @@ $(document).ready(function () {
   let total = $(".panel li").length;
   let i = 0;
   let wid = $(".panel li").width();
-
+  start();
+  function start() {
+    $(".panel li").eq(i).addClass("active");
+    timer = setInterval(function () {
+      i++;
+      $(".panel")
+        .stop()
+        .animate({ left: -i * wid }, function () {
+          if (i == total - 1) {
+            $(".panel").css({ left: 0 });
+            i = 0;
+          }
+          $(".panel li").removeClass("active");
+          $(".panel li").eq(i).addClass("active");
+        });
+    }, 3500);
+  }
   $(".next").on("click", function () {
     i++;
     if (i >= total) {
@@ -12,6 +28,8 @@ $(document).ready(function () {
     $(".panel")
       .stop()
       .animate({ left: -i * wid }, 500);
+    $(".panel li").removeClass("active");
+    $(".panel li").eq(i).addClass("active");
   });
 
   $(".prev").on("click", function () {
@@ -23,6 +41,8 @@ $(document).ready(function () {
     $(".panel")
       .stop()
       .animate({ left: -i * wid }, 500);
+    $(".panel li").removeClass("active");
+    $(".panel li").eq(i).addClass("active");
   });
 
   $(".gnb")
@@ -93,7 +113,6 @@ $(document).ready(function () {
     });
   });
 });
-
 $(function () {
   $(".xe").on("click", function () {
     $(".overlay").toggleClass("on");

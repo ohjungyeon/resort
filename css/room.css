@@ -195,7 +195,9 @@ ul {
     position: relative;
     background-image: url(../img/vojtech-bruzek-Yrxr3bsPdS0-unsplash.jpg);
   }
+
   .panel li h1 {
+    /* opacity: 0; */
     color: white;
     position: absolute;
     top: 50%;
@@ -208,6 +210,7 @@ ul {
   }
 
   .panel li h4 {
+    /* opacity: 0; */
     color: white;
     position: absolute;
     top: 55%;
@@ -226,7 +229,11 @@ ul {
     top: 50%;
     transform: translateY(-50%);
   }
-
+  .panel li.active > div > h1,
+  .panel li.active > div > h4 {
+    opacity: 1;
+    transition: opacity 0.5s, transform 0.5s;
+  }
   .prev {
     opacity: 0.8;
     left: 10px;

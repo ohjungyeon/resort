@@ -1,9 +1,26 @@
-$(function () {
-  // 이미지 슬라이드 관련 코드
+$(document).ready(function () {
   let total = $(".panel li").length;
   let i = 0;
   let wid = $(".panel li").width();
 
+  start();
+  
+  function start() {
+    $(".panel li").eq(i).addClass("active");
+    timer = setInterval(function () {
+      i++;
+      $(".panel")
+        .stop()
+        .animate({ left: -i * wid }, function () {
+          if (i == total - 1) {
+            $(".panel").css({ left: 0 });
+            i = 0;
+          }
+          $(".panel li").removeClass("active");
+          $(".panel li").eq(i).addClass("active");
+        });
+    }, 3500);
+  }
   $(".next").on("click", function () {
     i++;
     if (i >= total) {
@@ -13,6 +30,8 @@ $(function () {
     $(".panel")
       .stop()
       .animate({ left: -i * wid }, 500);
+    $(".panel li").removeClass("active");
+    $(".panel li").eq(i).addClass("active");
   });
 
   $(".prev").on("click", function () {
@@ -24,7 +43,27 @@ $(function () {
     $(".panel")
       .stop()
       .animate({ left: -i * wid }, 500);
+    $(".panel li").removeClass("active");
+    $(".panel li").eq(i).addClass("active");
   });
+
+  $(".gnb")
+    .mouseenter(function () {
+      $(".lnb").addClass("active");
+    })
+    .mouseleave(function () {
+      $(".lnb").removeClass("active");
+    });
+
+  // 초기 로딩 바 애니메이션
+  for (let i = 0; i <= 100; i++) {
+    setTimeout(() => {
+      $(".solid").css("width", i + "%");
+      if (i === 100) {
+        $(".solid").css("right", "10%");
+      }
+    }, i * 30);
+  }
 
   // 메뉴 호버 관련 코드
   $(".gnb")
