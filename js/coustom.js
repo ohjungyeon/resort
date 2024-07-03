@@ -186,29 +186,50 @@ $(function () {
   $(".panel").width(total * wid);
 
   start();
-
   function start() {
-    $(".panel li").eq(i).find("div").addClass("visible"); // 첫 번째 요소에 visible 클래스 추가
+    $(".panel li").eq(i).find("div").addClass("visible");
+
     timer = setInterval(function () {
-      $(".panel li").eq(i).find("div").removeClass("visible"); // 현재 요소에서 visible 클래스 제거
+      $(".panel li").eq(i).find("div").removeClass("visible");
       i++;
-      if (i == total) {
-        // i가 total과 같아지면(즉, 마지막 요소 이후가 되면)
-        i = 0; // 인덱스를 0으로 초기화
-        $(".panel").css({ left: 0 }); // 패널을 처음 위치로 이동
-        $(".panel li").eq(i).find("div").addClass("visible"); // 첫 번째 요소에 visible 클래스 추가
+      if (i == total - 1) {
+        $(".panel")
+          .stop()
+          .animate({ left: -(total - 1) * wid }, function () {
+            $(".panel").css({ left: 0 });
+            $(".panel li").eq(i).find("div").addClass("visible");
+          });
+
+        i = 0;
       } else {
         $(".panel")
           .stop()
           .animate({ left: -i * wid }, function () {
-            // 패널을 왼쪽으로 애니메이션
-            $(".panel li").eq(i).find("div").addClass("visible"); // 현재 요소에 visible 클래스 추가
+            $(".panel li").eq(i).find("div").addClass("visible");
           });
       }
       $(".navi li").removeClass("on"); // 모든 네비게이션 요소에서 on 클래스 제거
       $(".navi li").eq(i).addClass("on"); // 현재 네비게이션 요소에 on 클래스 추가
     }, 3000); // 3초마다 반복
   }
+  // function start() {
+  //   $(".panel li").eq(i).find("div").addClass("visible"); // 첫 번째 요소에 visible 클래스 추가
+  //   timer = setInterval(function () {
+  //     $(".panel li").eq(i).find("div").removeClass("visible"); // 현재 요소에서 visible 클래스 제거
+  //     i++;
+  //     if (i == total - 1) {
+  //       // i가 total과 같아지면(즉, 마지막 요소 이후가 되면)
+  //       i = 0; // 인덱스를 0으로 초기화
+  //       $(".panel").css({ left: 0 }); // 패널을 처음 위치로 이동
+  //       $(".panel li").eq(i).find("div").addClass("visible"); // 첫 번째 요소에 visible 클래스 추가
+  //     } else {
+  //       $(".panel")
+  //         .stop()
+  //         .animate({ left: -i * wid }, function () {
+  //           // 패널을 왼쪽으로 애니메이션
+  //           $(".panel li").eq(i).find("div").addClass("visible"); // 현재 요소에 visible 클래스 추가
+  //         });
+  //     }
 
   // 네비게이션 버튼 클릭 이벤트
   $(".navi li").on("click", function () {
