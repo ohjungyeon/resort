@@ -349,7 +349,8 @@ ul {
 
   #container3 h2,
   #container4 h2 {
-    font-size: 30px;
+    margin-bottom: 10px;
+    font-size: 35px;
   }
 
   #container3 li img,
